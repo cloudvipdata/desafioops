@@ -4,14 +4,11 @@ trigger:
     - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'EnvAgentTest'
 
 
 steps:
-- task: TerraformTaskV4@0
-  displayName: 'Install Terraform'
+- task: TerraformCLI@0
   inputs:
-    terraformVersion: 'latest'
-
-- checkout: self
-  displayName: 'Checkout repository'
+    command: 'init'
+    allowTelemetryCollection: true
