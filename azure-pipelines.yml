@@ -10,7 +10,7 @@ pool:
 
 steps:
 - task: TerraformCLI@0
-  displeyname: Terraform Init
+  displayName: Terraform Init
   inputs:
     command: 'init'
     allowTelemetryCollection: true
