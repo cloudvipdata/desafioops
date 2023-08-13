@@ -10,14 +10,6 @@ pool:
 
 steps:
 - task: TerraformCLI@0
-  displayName: Terraform Init
   inputs:
     command: 'init'
-    allowTelemetryCollection: true
-
-- task: TerraformCLI@0
-  displayName: Terraform Plan
-  inputs:
-    command: 'plan'
-    environmentServiceName: 'Azure subscription 1(1)(2e2fa1b5-ea13-4494-8105-4ef621949c4f)'
     allowTelemetryCollection: false
