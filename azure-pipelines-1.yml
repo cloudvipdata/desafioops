@@ -7,13 +7,10 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: EnvAgentTest
 
 steps:
-- task: Bash@3
+- task: TerraformCLI@0
   inputs:
-    targetType: 'inline'
-    script: |
-      #!/bin/bash
-      
-      terraform -version
+    command: 'init'
+    allowTelemetryCollection: true
